@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="BrushesAndTransforms.ReflectionEffect"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    <Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<Image Source="harpsichord.jpg"></Image>
+		<Image Grid.Row="1" Source="harpsichord.jpg"  RenderTransformOrigin="0,0.4">
+			<Image.OpacityMask>
+				<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+					<GradientStop Offset="0" Color="Transparent"></GradientStop>
+					<GradientStop Offset="1" Color="#44000000"></GradientStop>
+				</LinearGradientBrush>
+			</Image.OpacityMask>
+			<Image.RenderTransform>
+				<ScaleTransform ScaleY="-0.8"></ScaleTransform>
+			</Image.RenderTransform>
+		</Image>
+	</Grid>
+</UserControl>

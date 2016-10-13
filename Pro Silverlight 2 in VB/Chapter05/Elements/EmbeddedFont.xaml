@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="Elements.EmbeddedFont"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    <StackPanel x:Name="LayoutRoot" Background="White" Margin="20" >
+		<TextBlock FontFamily="BayernFont.ttf#Bayern" FontSize="35">This is an embedded font</TextBlock>
+	</StackPanel>
+</UserControl>

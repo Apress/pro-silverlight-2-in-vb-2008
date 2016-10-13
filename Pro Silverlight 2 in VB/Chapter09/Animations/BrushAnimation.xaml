@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Animations.BrushAnimation"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300" Loaded="UserControl_Loaded">
+	<UserControl.Resources>
+			
+				<Storyboard x:Name="ellipseStoryboard">
+					<PointAnimation Storyboard.TargetName="ellipseBrush"
+   Storyboard.TargetProperty="GradientOrigin"
+   From="0.7,0.3" To="0.3,0.7" Duration="0:0:10" AutoReverse="True"
+   RepeatBehavior="Forever">
+					</PointAnimation>
+			<ColorAnimation Storyboard.TargetName="ellipseBrushStop"
+   Storyboard.TargetProperty="Color"
+   To="Yellow" Duration="0:0:10" AutoReverse="True"
+   RepeatBehavior="Forever">
+			</ColorAnimation>
+		</Storyboard>
+			</UserControl.Resources>
+
+	
+		<Grid x:Name="LayoutRoot" Background="White">
+		
+		<Ellipse x:Name="ellipse" Margin="5" Grid.Row="1" Stretch="Uniform">
+			<Ellipse.Fill>
+				<RadialGradientBrush x:Name="ellipseBrush"
+     RadiusX="1" RadiusY="1" GradientOrigin="0.7,0.3">
+					<GradientStop x:Name="ellipseBrushStop" Color="White" Offset="0"></GradientStop>
+					<GradientStop Color="Blue" Offset="1"></GradientStop>
+				</RadialGradientBrush>
+			</Ellipse.Fill>
+		</Ellipse>
+	</Grid>
+</UserControl>

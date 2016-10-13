@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="ScriptableSilverlight.ScriptableSilverlight"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Border BorderThickness="1" BorderBrush="Black">
+		<Border.Background>
+			<LinearGradientBrush>
+				<GradientStop Color="SteelBlue"></GradientStop>
+				<GradientStop Color="White" Offset="1"></GradientStop>
+			</LinearGradientBrush>
+		</Border.Background>
+		
+		<TextBlock x:Name="lbl" TextWrapping="Wrap" Margin="10" Foreground="White" FontFamily="Georgia" FontSize="21" Text="This is a Silverlight TextBlock."></TextBlock>
+    </Border>
+</UserControl>

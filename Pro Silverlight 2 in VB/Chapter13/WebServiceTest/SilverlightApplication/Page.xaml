@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="SilverlightApplication.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    <StackPanel x:Name="LayoutRoot" Background="White">
+		<Button Content="Call Ordinary Service" Click="callService_Click" Margin="5" Padding="3"></Button>		
+		<Button Content="Call Cached Service" Click="callCachedService_Click" Margin="5" Padding="3"></Button>
+		<TextBlock x:Name="lblTime" Margin="5" TextWrapping="Wrap"></TextBlock>
+		
+	</StackPanel>
+</UserControl>

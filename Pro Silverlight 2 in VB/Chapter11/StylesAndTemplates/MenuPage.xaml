@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="StylesAndTemplates.MenuPage"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"  
+    >
+    <Grid x:Name="LayoutRoot" Background="White" Margin="5">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="3*"></RowDefinition>
+		</Grid.RowDefinitions>
+		
+		<ListBox SelectionChanged="lstPages_SelectionChanged">
+		    <ListBoxItem Content="SimpleStyles"></ListBoxItem>			
+			<ListBoxItem Content="SimpleButtonTemplate"></ListBoxItem>
+			<ListBoxItem Content="TemplateStates"></ListBoxItem>
+			<ListBoxItem Content="FlashingButton"></ListBoxItem>
+			<ListBoxItem Content="TemplateParts"></ListBoxItem>
+			<ListBoxItem Content="ExpanderTest"></ListBoxItem>
+		</ListBox>
+		
+		<basics:GridSplitter Grid.Row="1" Margin="0 3" HorizontalAlignment="Stretch"
+		 Height="2">
+		</basics:GridSplitter>
+		
+		<Border Grid.Row="2" BorderBrush="SlateGray"  BorderThickness="1"
+		 Name="pagePlaceholder" Background="AliceBlue"></Border>		
+	</Grid>
+</UserControl>

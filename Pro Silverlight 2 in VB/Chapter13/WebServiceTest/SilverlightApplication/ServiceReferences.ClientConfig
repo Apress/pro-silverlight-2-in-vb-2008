@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_TestService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:3003/SilverlightApplication.Web/TestService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_TestService"
+                contract="ServiceReference1.TestService" name="BasicHttpBinding_TestService" />
+        </client>
+    </system.serviceModel>
+</configuration>

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Elements.DateControls"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+     xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+    >
+    
+	<Grid Background="White" Margin="3">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+		
+		<StackPanel>
+		  <basics:Calendar Margin="3" SelectionMode="MultipleRange" SelectedDatesChanged="Calendar_SelectedDatesChanged" ></basics:Calendar>
+		  <basics:Calendar Margin="3" DisplayMode="Year" SelectedDatesChanged="Calendar_SelectedDatesChanged" ></basics:Calendar>
+		</StackPanel>
+		
+		<StackPanel Grid.Column="1">
+			<basics:DatePicker Margin="3" DateValidationError="DatePicker_DateValidationError" ></basics:DatePicker>
+			<basics:DatePicker Margin="3" SelectedDateFormat="Long" DateValidationError="DatePicker_DateValidationError" ></basics:DatePicker>
+		</StackPanel>
+		
+		<TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Name="lblError" Foreground="Red" TextWrapping="Wrap"></TextBlock>
+	</Grid>
+</UserControl>

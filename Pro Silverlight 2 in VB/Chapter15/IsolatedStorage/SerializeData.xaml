@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="IsolatedStorage.SerializeData"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+ Loaded="Page_Loaded"  xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" >
+    <Grid x:Name="LayoutRoot" Background="White">
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		
+		<Grid Grid.RowSpan="3" Margin="10" >
+			<Grid.RowDefinitions>
+				<RowDefinition></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+			</Grid.RowDefinitions>
+				<ListBox x:Name="lstPeople" SelectionChanged="lstPeople_SelectionChanged"></ListBox>
+			<Button Grid.Row="1" x:Name="Delete" Margin="0,5" Content="Delete" Click="Delete_Click"></Button>
+		</Grid>
+		
+		<Grid Grid.Column="1" Margin="10">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+				<ColumnDefinition></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Text="First Name: "></TextBlock>
+			<TextBox x:Name="txtFirstName" Grid.Column="1"></TextBox>
+<TextBlock Grid.Row="1" Text="Last Name: "></TextBlock>
+<TextBox x:Name="txtLastName" Grid.Column="1" Grid.Row="1"></TextBox>
+<TextBlock Grid.Row="2" Text="Date Of Birth: "></TextBlock>
+			<basics:DatePicker x:Name="dpDateOfBirth" Grid.Column="1" Grid.Row="2"></basics:DatePicker>
+
+			<Button x:Name="cmdAdd" Margin="0,5" Content="Add or Update" Grid.Row="3" Grid.Column="1" 
+			Click="cmdAdd_Click"></Button>
+    </Grid>
+    </Grid>
+</UserControl>

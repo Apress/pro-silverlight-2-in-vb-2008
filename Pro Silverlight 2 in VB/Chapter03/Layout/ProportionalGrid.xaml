@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Layout.ProportionalGrid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	<Grid ShowGridLines="True" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<Button Grid.Row="0" Grid.Column="0" Content="Top Left"></Button>
+		<Button Grid.Row="0" Grid.Column="1" Content="Middle Left"></Button>
+		<Button Grid.Row="1" Grid.Column="2" Content="Bottom Right"></Button>
+		<Button Grid.Row="1" Grid.Column="1" Content="Bottom Middle"></Button>
+
+	</Grid>
+
+</UserControl>

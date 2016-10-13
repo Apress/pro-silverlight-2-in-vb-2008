@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="ApplicationParameters.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Loaded="UserControl_Loaded">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <TextBlock FontSize="30" x:Name="lblViewMode" TextWrapping="Wrap"></TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="BrowserHistory.Page2"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<TextBlock Margin="10">This page is named Page2.</TextBlock>
+		<Button Grid.Row="1" Margin="10" Content="Go to Page3 -->" Click="Button_Click"></Button>
+	</Grid>
+</UserControl>

@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="TransparentSilverlight.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+		<TextBlock  TextWrapping="Wrap" FontFamily="Georgia" FontWeight="Bold" FontSize="20">This text is from the Silverlight plug-in, as is the ellipse below.</TextBlock>
+		<Ellipse Margin="0,30" Grid.Row="1" Width="100" Height="150" Stroke="White" StrokeThickness="5" Fill="Lime"></Ellipse>
+	</Grid>
+</UserControl>

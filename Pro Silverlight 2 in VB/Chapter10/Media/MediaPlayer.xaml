@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="Media.MediaPlayer"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+
+	<Grid Margin="20" Background="White" >
+	
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<MediaElement x:Name="media" AutoPlay="False" Source="test.mp3"  
+		MediaOpened="media_MediaOpened" MediaFailed="media_MediaFailed"
+		 MediaEnded="media_MediaEnded" CurrentStateChanged="media_CurrentStateChanged"></MediaElement>
+		<StackPanel Orientation="Horizontal">
+			<Button Click="cmdPlay_Click" Padding="5" Margin="1" Content="Play"></Button>
+			<Button Click="cmdStop_Click" Padding="5" Margin="1" Content="Stop"></Button>
+			<Button Click="cmdPause_Click" Padding="5" Margin="1" Content="Pause"></Button>
+		</StackPanel>
+
+		<Grid Grid.Row="1" Margin="0,10,0,0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>				
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+				<ColumnDefinition></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Margin="5" Text="Volume: "></TextBlock>
+			<Slider Grid.Column="1"  Minimum="0" Maximum="1" x:Name="sliderVolume" Value="0.5"				
+			ValueChanged="sliderVolume_ValueChanged" ></Slider>
+
+			<TextBlock Grid.Row="1" Margin="5" Text="Balance: "></TextBlock>
+			<Slider Grid.Row="1" Grid.Column="1" Minimum="-1" Maximum="1" x:Name="sliderBalance"
+			ValueChanged="sliderBalance_ValueChanged" 
+      ></Slider>
+
+			
+			<TextBlock Grid.Row="2" Margin="5" Text="Seek To: "></TextBlock>
+			<Slider Minimum="0" Grid.Column="1" Grid.Row="2"  x:Name="sliderPosition"
+			  ValueChanged="sliderPosition_ValueChanged" ></Slider>
+
+            <Slider Minimum="0" Grid.Column="1" Grid.Row="2" IsHitTestVisible="False" x:Name="sliderPositionBackground"
+			  Opacity="0.5">			
+			</Slider>
+			
+		</Grid>
+		<CheckBox Grid.Row="2" Margin="5,5,5,0" Content="Loop" x:Name="chkLoop"></CheckBox>
+		<CheckBox Grid.Row="3" Margin="5,0" Content="Mute" x:Name="chkMute" Click="chkMute_Click"></CheckBox>
+		<TextBlock Grid.Row="4" Margin="10" HorizontalAlignment="Center" x:Name="lblStatus"></TextBlock>
+	</Grid>
+</UserControl>

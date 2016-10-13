@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="DataBinding.FilterCollectionWithLinq"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"  
+    >
+	<Grid Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+			</Grid.RowDefinitions>
+
+			<ListBox x:Name="lstProducts" Margin="5,0" DisplayMemberPath="ModelName"
+                SelectionChanged="lstProducts_SelectionChanged"></ListBox>
+
+			<StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5,2,5,5" HorizontalAlignment="Right">
+				<TextBlock VerticalAlignment="Center">Minimum Cost:</TextBlock>
+				<TextBox x:Name="txtMinimumCost" Margin="5,0" Width="40" Text="100"></TextBox>
+				<Button Margin="2,0,0,0"  Padding="2"
+              Click="cmdGetProducts_Click" Content="Get Products"></Button>
+			</StackPanel>
+			
+		</Grid>
+		<basics:GridSplitter Grid.Row="1"
+     Height="3" VerticalAlignment="Center" HorizontalAlignment="Stretch"></basics:GridSplitter>
+
+		<Border Grid.Row="3" Padding="7" Margin="7" Background="LightSteelBlue">
+			<Grid x:Name="gridProductDetails">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"></ColumnDefinition>
+					<ColumnDefinition></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+				</Grid.RowDefinitions>
+
+				<TextBlock Margin="7">Model Number:</TextBlock>
+				<TextBox Margin="5" Grid.Column="1" Text="{Binding ModelNumber}"></TextBox>
+				<TextBlock Margin="7" Grid.Row="1">Model Name:</TextBlock>
+				<TextBox Margin="5" Grid.Row="1" Grid.Column="1" Text="{Binding ModelName}"></TextBox>
+				<TextBlock Margin="7" Grid.Row="2">Unit Cost:</TextBlock>
+				<TextBox Margin="5" Grid.Row="2" Grid.Column="1" Text="{Binding UnitCost}"></TextBox>
+				<TextBlock Margin="7,7,7,0" Grid.Row="3">Description:</TextBlock>
+				<TextBox Margin="7" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                 TextWrapping="Wrap" Text="{Binding Description}"></TextBox>
+
+				<TextBlock x:Name="lblError" Grid.Row="5" Grid.ColumnSpan="2" FontSize="10" Margin="7" Foreground="DarkRed" TextWrapping="Wrap"></TextBlock>
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

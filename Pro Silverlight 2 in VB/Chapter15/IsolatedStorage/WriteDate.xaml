@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="IsolatedStorage.WriteDate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	
+		<StackPanel Margin="10">
+			<Button x:Name="cmdWrite" Margin="5" Padding="5" Content="Write"
+			Click="cmdWrite_Click"></Button>
+			<Button x:Name="cmdRead" Margin="5" Padding="5" Content="Read"
+			Click="cmdRead_Click"></Button>
+		<Button x:Name="cmdTryIncrease" Margin="5" Padding="5" Content="Try to Increase Quota"
+			Click="cmdTryIncrease_Click"></Button>
+		<TextBlock x:Name="lblData" Margin="5"></TextBlock>
+		</StackPanel>
+	
+</UserControl>

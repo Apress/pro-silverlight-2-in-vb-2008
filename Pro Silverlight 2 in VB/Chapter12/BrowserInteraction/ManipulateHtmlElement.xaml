@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="BrowserInteraction.ManipulateHtmlElement"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Grid x:Name="LayoutRoot" Background="AliceBlue">
+		<StackPanel MaxWidth="200" Margin="10">
+			<Button Margin="10" Padding="10" Content="Create Element" Click="cmdCreate_Click"></Button>
+			<Button Margin="10" Padding="10" Content="Change Element" Click="cmdChange_Click"></Button>
+			<Button Margin="10" Padding="10" Content="Remove Element" Click="cmdRemove_Click"></Button>
+			<Button Margin="10" Padding="10" Content="Trigger JavaScript" Click="cmdScript_Click"></Button>
+		</StackPanel>
+	</Grid>
+</UserControl>

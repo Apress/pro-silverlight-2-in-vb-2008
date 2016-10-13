@@ -1,0 +1,17 @@
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\Bin\Debug\AppManifest.xaml
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\Bin\Debug\BrowserHistory.dll
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\Bin\Debug\BrowserHistory.pdb
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\Bin\Debug\BrowserHistory.xml
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\Bin\Debug\BrowserHistory.xap
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\Bin\Debug\TestPage.html
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\ResolveAssemblyReference.cache
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\App.g.vb
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\Page1.g.vb
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\Page2.g.vb
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\Page3.g.vb
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\Page4.g.vb
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\BrowserHistory.g.resources
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\BrowserHistory.dll
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\BrowserHistory.xml
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\BrowserHistory.pdb
+D:\Code\Pro Silverlight 2 in VB\Chapter12\BrowserHistory\obj\Debug\XapCacheFile.xml

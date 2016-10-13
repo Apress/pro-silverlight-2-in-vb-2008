@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Layout.NestedContainers"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+   >
+	<Grid ShowGridLines="True" Background="SteelBlue"
+ HorizontalAlignment="Center" VerticalAlignment="Center">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<TextBlock Margin="10" Grid.Row="0" Foreground="White" 
+   Text="This is simply a test of nested containers."></TextBlock>
+		<StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal">
+			<Button Margin="10,10,2,10" Padding="3" Content="OK"></Button>
+			<Button Margin="2,10,10,10" Padding="3" Content="Cancel"></Button>
+		</StackPanel>
+	</Grid>
+
+</UserControl>

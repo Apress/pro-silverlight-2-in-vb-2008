@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="DataBinding.BindProductObject"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Loaded="Page_Loaded" 
+    xmlns:local="clr-namespace:DataBinding.Local"    
+   >
+	<UserControl.Resources>
+		<local:Product x:Key="resourceProduct"
+		ModelNumber="AEFS100"
+		 ModelName="Portable Defibrillator" UnitCost="77" 
+		 Description="Analyzes the electrical activity of a person's heart and applies an electric shock if necessary."
+		 >
+		 </local:Product>
+	</UserControl.Resources>
+		<Grid Name="gridProductDetails" Background="White" BindingValidationError="Grid_BindingValidationError">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<TextBlock Margin="7">Model Number:</TextBlock>
+		<TextBox Margin="5" Grid.Column="1"
+   Text="{Binding ModelNumber}"></TextBox>
+		<TextBlock Margin="7" Grid.Row="1">Model Name:</TextBlock>
+		<TextBox Margin="5" Grid.Row="1" Grid.Column="1"
+   Text="{Binding ModelName}"></TextBox>
+		<TextBlock Margin="7" Grid.Row="2">Unit Cost:</TextBlock>
+		<TextBox Margin="5" Grid.Row="2" Grid.Column="1" x:Name="txtUnitCost"
+   Text="{Binding UnitCost, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" TextChanged="TextBox_TextChanged"></TextBox>
+		<TextBlock Margin="7,7,7,0" Grid.Row="3">Description:</TextBlock>
+		<TextBox Margin="7" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+   Text="{Binding Description}" TextWrapping="Wrap"></TextBox>
+
+		<StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal">
+			<Button Margin="5" Padding="3" Content="Change Product" Click="cmdChange_Click"></Button>
+			<Button Margin="5" Padding="3" Content="Check Product" Click="cmdCheck_Click"></Button>
+		</StackPanel>
+		
+		<TextBlock Foreground="Red" FontWeight="Bold" x:Name="lblInfo" Margin="7" Grid.Row="6" Grid.ColumnSpan="2"></TextBlock>
+	</Grid>
+
+</UserControl>

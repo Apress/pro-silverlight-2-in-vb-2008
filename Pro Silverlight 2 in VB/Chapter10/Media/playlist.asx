@@ -1,0 +1,11 @@
+﻿<asx version="3.0">
+<title>My Playlist</title>
+<entry>
+<title>Movie #1</title>
+<ref href="test.wmv"/>
+</entry>
+<entry>
+<title>Movie #2</title>
+<ref href="Butterfly.wmv"/>
+</entry>
+</asx>

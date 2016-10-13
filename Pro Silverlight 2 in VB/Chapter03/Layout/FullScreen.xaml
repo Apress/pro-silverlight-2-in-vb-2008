@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Layout.FullScreen"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    <Grid x:Name="LayoutRoot" Background="White" KeyDown="LayoutRoot_KeyDown">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+			<Button Click="Button_Click" Content="Full Screen"></Button>
+		<TextBox Grid.Row="1" Margin="5" Text="You can't type here in full screen mode"></TextBox>
+		<TextBlock x:Name="lbl" Grid.Row="2" Margin="5"></TextBlock>
+	</Grid>
+</UserControl>

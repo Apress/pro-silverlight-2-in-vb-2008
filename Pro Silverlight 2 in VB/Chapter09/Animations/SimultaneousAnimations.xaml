@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Animations.SimultaneousAnimations"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    >
+
+	<UserControl.Resources>
+		<Storyboard x:Name="storyboard" Storyboard.TargetName="cmdGrow" FillBehavior="Stop">
+			<DoubleAnimation Storyboard.TargetProperty="Width"
+   To="300" Duration="0:0:2" FillBehavior="HoldEnd"></DoubleAnimation>
+			<DoubleAnimation Storyboard.TargetProperty="Height"
+   To="300" Duration="0:0:5"></DoubleAnimation>
+		</Storyboard>
+
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Button x:Name="cmdGrow" Width="160" Height="30" Click="Button_Click" Content="This button grows"></Button>
+	</Grid>
+</UserControl>

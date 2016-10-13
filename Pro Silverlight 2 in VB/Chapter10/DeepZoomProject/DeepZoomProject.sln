@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DeepZoomProject", "DeepZoomProject\DeepZoomProject.vbproj", "{75C2EE54-03C9-4150-99FB-C7BAB850E1ED}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DeepZoomProject.Web", "DeepZoomProject.Web\DeepZoomProject.Web.vbproj", "{5E1DC24E-6144-48AE-B20D-3BA3B8AB6C2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75C2EE54-03C9-4150-99FB-C7BAB850E1ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C2EE54-03C9-4150-99FB-C7BAB850E1ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C2EE54-03C9-4150-99FB-C7BAB850E1ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C2EE54-03C9-4150-99FB-C7BAB850E1ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E1DC24E-6144-48AE-B20D-3BA3B8AB6C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1DC24E-6144-48AE-B20D-3BA3B8AB6C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1DC24E-6144-48AE-B20D-3BA3B8AB6C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1DC24E-6144-48AE-B20D-3BA3B8AB6C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

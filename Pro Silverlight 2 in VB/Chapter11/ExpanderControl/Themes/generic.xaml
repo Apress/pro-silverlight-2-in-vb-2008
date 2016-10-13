@@ -1,0 +1,93 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/client/2007"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:local="clr-namespace:ExpanderControl;assembly=ExpanderControl"
+   >
+	<Style TargetType="local:Expander">
+		<Setter Property="BorderBrush" Value="SteelBlue"></Setter>
+		<Setter Property="CornerRadius" Value="5"></Setter>
+		<Setter Property="BorderThickness" Value="3"></Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="local:Expander">
+
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="ViewStates">
+								<VisualStateGroup.Transitions>
+									
+									<VisualTransition GeneratedDuration="0:0:0.5">									
+									</VisualTransition>
+									
+								</VisualStateGroup.Transitions>
+									<VisualState x:Name="Expanded">
+									<Storyboard>
+										<DoubleAnimation Storyboard.TargetName="ContentScaleTransform"
+								Storyboard.TargetProperty="ScaleY" To="1" Duration="0"></DoubleAnimation>
+										<DoubleAnimation Storyboard.TargetName="RotateButtonTransform" 
+															Storyboard.TargetProperty="Angle" Duration="0" To="180"></DoubleAnimation>
+
+									</Storyboard>
+								</VisualState>
+
+								<VisualState x:Name="Collapsed">
+									<Storyboard>						
+
+										<DoubleAnimation Storyboard.TargetName="ContentScaleTransform"
+								Storyboard.TargetProperty="ScaleY" To="0" Duration="0"></DoubleAnimation>
+								<DoubleAnimation Storyboard.TargetName="RotateButtonTransform"
+															Storyboard.TargetProperty="Angle" Duration="0" To="0"></DoubleAnimation>
+								</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							
+						</VisualStateManager.VisualStateGroups>
+
+
+						<Border BorderBrush="{TemplateBinding BorderBrush}"
+						 BorderThickness="{TemplateBinding BorderThickness}"
+						 CornerRadius="{TemplateBinding CornerRadius}" Background="{TemplateBinding Background}">
+							<Grid>
+								<Grid.RowDefinitions>
+									<RowDefinition Height="Auto"></RowDefinition>
+									<RowDefinition Height="Auto"></RowDefinition>
+								</Grid.RowDefinitions>
+
+								<!-- Header -->
+								<Grid Margin="3">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="Auto"></ColumnDefinition>
+										<ColumnDefinition Width="Auto"></ColumnDefinition>
+									</Grid.ColumnDefinitions>
+									<ContentPresenter x:Name="Header" Content="{TemplateBinding HeaderContent}" Margin="3"></ContentPresenter>
+
+									<ToggleButton Grid.Column="1" x:Name="ExpandCollapseButton" Margin="3" RenderTransformOrigin="0.5,0.5">
+										<ToggleButton.Template>
+											<ControlTemplate>
+												<Grid>													
+													<Ellipse Stroke="#FFA9A9A9"  Fill="AliceBlue"   Width="19" Height="19"  />
+													<Path Data="M1,1.5L4.5,5 8,1.5" Stroke="#FF666666" StrokeThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center">													
+													</Path>
+												</Grid>
+											</ControlTemplate>
+										</ToggleButton.Template>
+										<ToggleButton.RenderTransform>
+											<RotateTransform x:Name="RotateButtonTransform"></RotateTransform>
+										</ToggleButton.RenderTransform>
+									</ToggleButton>
+								</Grid>
+
+								<!-- Content -->
+								<ContentPresenter Grid.Row="1" x:Name="Content" Content="{TemplateBinding Content}" Margin="5">
+									<ContentPresenter.RenderTransform>
+										<ScaleTransform x:Name="ContentScaleTransform"></ScaleTransform>
+									</ContentPresenter.RenderTransform>
+								</ContentPresenter>
+							</Grid>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

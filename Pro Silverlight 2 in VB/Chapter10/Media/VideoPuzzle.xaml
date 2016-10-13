@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Media.VideoPuzzle"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Loaded="Page_Loaded">
+	<UserControl.Resources>
+		<Storyboard x:Name="squareMoveStoryboard">
+			<DoubleAnimation x:Name="leftAnimation" Storyboard.TargetProperty="(Canvas.Left)" 
+			Duration="0:0:0.25"></DoubleAnimation>
+			<DoubleAnimation x:Name="topAnimation" Storyboard.TargetProperty="(Canvas.Top)" 
+			Duration="0:0:0.15"></DoubleAnimation>
+		</Storyboard>
+	</UserControl.Resources>
+	<StackPanel>
+		<StackPanel Margin="10"  Orientation="Horizontal">
+			<TextBlock  Margin="3" Text="Rows:"></TextBlock>
+			<TextBox x:Name="txtRows" Margin="3" Width="30" Text="3"></TextBox>
+			<TextBlock Margin="3" Text="Columns:"></TextBlock>
+			<TextBox x:Name="txtCols" Margin="3" Width="30" Text="3"></TextBox>
+			<Button x:Name="cmdGeneratePuzzle" Margin="5,3" Padding="5,0" Click="cmdGeneratePuzzle_Click" Content="Generate Puzzle"></Button>
+		</StackPanel>
+		
+		<MediaElement x:Name="videoClip" Source="Butterfly.wmv" Height="0" Width="0" MediaEnded="videoClip_MediaEnded"></MediaElement>
+		<Canvas Margin="20" x:Name="puzzleSurface" Width="300" Height="300" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+		</Canvas>	    
+	</StackPanel>
+</UserControl>

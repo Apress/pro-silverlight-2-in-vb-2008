@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="BrushesAndTransforms.GradientText"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+	<Grid Background="White">
+		<TextBlock Margin="5" FontFamily="Arial Black" FontSize="65" TextWrapping="Wrap" TextAlignment="Center" Text="This text uses a gradient.">
+        <TextBlock.Foreground>
+          <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Yellow" Offset="0.0" />
+            <GradientStop Color="Red" Offset="0.25" />
+            <GradientStop Color="Blue" Offset="0.75" />
+            <GradientStop Color="LimeGreen" Offset="1.0" />
+          </LinearGradientBrush>
+        </TextBlock.Foreground>
+      </TextBlock>
+	</Grid>
+</UserControl>

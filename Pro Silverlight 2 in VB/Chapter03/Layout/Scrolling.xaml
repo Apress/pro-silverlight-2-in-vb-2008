@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="Layout.Scrolling"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Margin="20">
+	<ScrollViewer Background="AliceBlue" VerticalScrollBarVisibility="Auto">
+		<Grid Margin="3,3,10,3">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+
+			<TextBox Grid.Row="0" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="0" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+			<TextBox Grid.Row="1" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="1" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+			<TextBox Grid.Row="2" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="2" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+			<TextBox Grid.Row="3" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="3" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+			<TextBox Grid.Row="4" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="4" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+			<TextBox Grid.Row="5" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="5" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+			<TextBox Grid.Row="6" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="6" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+			<TextBox Grid.Row="7" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="7" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+			<TextBox Grid.Row="8" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="8" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+
+			<TextBox Grid.Row="9" Grid.Column="0" Margin="3"
+      Height="Auto" VerticalAlignment="Center"></TextBox>
+			<Button Grid.Row="9" Grid.Column="1" Margin="3" Padding="2"
+				Content="Browse"></Button>
+		</Grid>
+	</ScrollViewer>
+
+
+</UserControl>

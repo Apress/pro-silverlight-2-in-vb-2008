@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="StylesAndTemplates.SimpleButtonTemplate"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+	<UserControl.Resources>
+			<Color x:Key="BackgroundColor">#FF800000</Color>
+			<ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+			<Border BorderBrush="Orange" BorderThickness="3" CornerRadius="10" Background="{TemplateBinding Background}">
+    <ContentPresenter Margin="{TemplateBinding Padding}">
+				</ContentPresenter>
+			</Border>
+		</ControlTemplate>
+		<Style x:Key="ButtonStyle" TargetType="Button">
+			<Setter Property="Foreground" Value="White"></Setter>
+			<Setter Property="Background" Value="{StaticResource BackgroundColor}"></Setter>
+			<Setter Property="Template" Value="{StaticResource ButtonTemplate}"></Setter>
+		</Style>
+
+
+	</UserControl.Resources>
+		<StackPanel x:Name="LayoutRoot" Background="White" >
+		<Button Style="{StaticResource ButtonStyle}" Content="A Templated Button" 
+ Margin="10" Padding="20" Click="Button_Click" FontSize="16"></Button>
+
+
+	</StackPanel>
+</UserControl>

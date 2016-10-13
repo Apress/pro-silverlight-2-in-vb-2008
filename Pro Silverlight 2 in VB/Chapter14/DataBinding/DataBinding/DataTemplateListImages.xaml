@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="DataBinding.DataTemplateListImages"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"  
+    xmlns:local="clr-namespace:DataBinding"
+   >
+	<UserControl.Resources>
+		<local:ImagePathConverter x:Key="ImagePathConverter"></local:ImagePathConverter>
+		<DataTemplate x:Key="ProductDataTemplate">
+			<Border Margin="5" BorderThickness="1" BorderBrush="SteelBlue" Width="125"
+			 CornerRadius="4">
+				<Grid Margin="3">
+					<Grid.RowDefinitions>
+						<RowDefinition></RowDefinition>
+						<RowDefinition></RowDefinition>
+						<RowDefinition></RowDefinition>
+					</Grid.RowDefinitions>
+					<TextBlock FontWeight="Bold" Text="{Binding Path=ModelNumber}"></TextBlock>
+					<TextBlock Grid.Row="1" Text="{Binding Path=ModelName}"></TextBlock>
+					<Image Grid.Row="2" Grid.RowSpan="2" Source="{Binding Path=ProductImagePath, Converter={StaticResource ImagePathConverter}}">
+					</Image>
+				</Grid>
+			</Border>
+		</DataTemplate>
+	</UserControl.Resources>
+
+	<Grid Background="White">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="3*"></ColumnDefinition>
+			<ColumnDefinition Width="5*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>				
+			</Grid.RowDefinitions>
+
+			<Button Margin="7,7,7,0" Padding="2" Click="cmdGetProducts_Click" Content="Get Products"></Button>
+
+			<ListBox x:Name="lstProducts" Grid.Row="1" Margin="7,3,7,10"
+				SelectionChanged="lstProducts_SelectionChanged" ItemTemplate="{StaticResource ProductDataTemplate}"
+				 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+				<ListBox.ItemsPanel>
+					<ItemsPanelTemplate>
+						<local:WrapPanel></local:WrapPanel>
+					</ItemsPanelTemplate>
+				</ListBox.ItemsPanel>
+			</ListBox>
+		</Grid>
+
+		<basics:GridSplitter Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Stretch"
+                   Width="2" Background="LightGray"></basics:GridSplitter>
+		<Border Grid.Column="1" Padding="7" Margin="7" Background="LightSteelBlue">
+			<Grid x:Name="gridProductDetails">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"></ColumnDefinition>
+					<ColumnDefinition></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+				</Grid.RowDefinitions>
+
+				<TextBlock Margin="7">Model Number:</TextBlock>
+				<TextBox Margin="5" Grid.Column="1" Text="{Binding ModelNumber}"></TextBox>
+				<TextBlock Margin="7" Grid.Row="1">Model Name:</TextBlock>
+				<TextBox Margin="5" Grid.Row="1" Grid.Column="1" Text="{Binding ModelName}"></TextBox>
+				<TextBlock Margin="7" Grid.Row="2">Unit Cost:</TextBlock>
+				<TextBox Margin="5" Grid.Row="2" Grid.Column="1" Text="{Binding UnitCost}"></TextBox>
+				<TextBlock Margin="7,7,7,0" Grid.Row="3">Description:</TextBlock>
+				<TextBox Margin="7" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                  TextWrapping="Wrap" Text="{Binding Description}" VerticalScrollBarVisibility="Visible"></TextBox>
+
+			</Grid>
+		</Border>
+		<TextBlock x:Name="lblError" Grid.Row="1" Grid.ColumnSpan="2" FontSize="10" Margin="7" Foreground="DarkRed" TextWrapping="Wrap"></TextBlock>
+	</Grid>
+</UserControl>

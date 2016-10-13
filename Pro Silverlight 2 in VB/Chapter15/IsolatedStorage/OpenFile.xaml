@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="IsolatedStorage.OpenFile"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+			<Button Margin="5" x:Name="cmdOpenFile" Click="cmdOpenFile_Click" Content="Open File"></Button>
+		<ScrollViewer Grid.Row="1" Margin="5" BorderBrush="Black" BorderThickness="1">
+		<TextBlock Margin="5" x:Name="lblData" TextWrapping="Wrap"></TextBlock>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

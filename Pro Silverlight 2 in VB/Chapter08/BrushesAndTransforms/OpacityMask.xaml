@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="BrushesAndTransforms.OpacityMask"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="400">
+    <Grid x:Name="LayoutRoot" Background="White" Margin="10,50">
+		<Grid>
+			<Grid.Background>
+			<ImageBrush ImageSource="grandpiano.jpg"></ImageBrush>
+		</Grid.Background>
+		
+			<Button Background="Purple" FontSize="14" FontWeight="Bold" Content="A Partially Transparent Button" Height="150">
+				<Button.OpacityMask>
+					<LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+						<GradientStop Offset="0" Color="Transparent"></GradientStop>
+						<GradientStop Offset="0.8" Color="Black"></GradientStop>
+					</LinearGradientBrush>
+				</Button.OpacityMask>
+				
+			</Button>
+</Grid>
+	</Grid>
+</UserControl>

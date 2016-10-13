@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="IsolatedStorage.ApplicationSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	<StackPanel Margin="10">
+		<Button x:Name="cmdSave" Margin="5" Padding="5" Content="Save Application Setting"
+			Click="cmdSave_Click"></Button>
+		<Button x:Name="cmdRead" Margin="5" Padding="5" Content="Read Application Setting"
+			Click="cmdRead_Click"></Button>
+		
+		<TextBlock x:Name="lblData" Margin="5"></TextBlock>
+	</StackPanel>
+</UserControl>

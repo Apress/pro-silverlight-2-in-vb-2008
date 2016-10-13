@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="SilverlightApplicationWithASP.NET.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="100">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+		<StackPanel>
+			<TextBlock x:Name="lblMessage" Text="Hello world." Margin="5"></TextBlock>
+			<Button x:Name="ClickMe" Content="Click Me!" Margin="5"
+			 Click="cmdClickMe_Click"></Button>
+		</StackPanel>
+	</Grid>
+</UserControl>

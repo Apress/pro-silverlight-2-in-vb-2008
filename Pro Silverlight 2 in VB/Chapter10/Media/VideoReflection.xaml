@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Media.VideoReflection"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	<Grid Margin="15" HorizontalAlignment="Center">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+			
+			<MediaElement x:Name="media" Source="test.wmv"
+     Stretch="Uniform"></MediaElement>
+		
+
+		
+			<Rectangle Grid.Row="1" Stretch="Uniform">
+				<Rectangle.Fill>
+					<VideoBrush SourceName="media">
+						<VideoBrush.RelativeTransform>
+							<ScaleTransform ScaleY="-1" CenterY="0.5"></ScaleTransform>
+						</VideoBrush.RelativeTransform>
+					</VideoBrush>
+				</Rectangle.Fill>
+
+				<Rectangle.OpacityMask>
+					<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+						<GradientStop Color="Black" Offset="0"></GradientStop>
+						<GradientStop Color="Transparent" Offset="0.6"></GradientStop>
+					</LinearGradientBrush>
+				</Rectangle.OpacityMask>
+			</Rectangle>
+		
+	</Grid>
+
+</UserControl>

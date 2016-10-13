@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SilverlightApplication", "SilverlightApplication\SilverlightApplication.vbproj", "{C713EDA6-CD8E-4D8B-B936-48FA2B955BDA}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SilverlightApplication.Web", "SilverlightApplication.Web\", "{7749D1DD-AA52-44D8-B262-A76E2DC4AD6A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/SilverlightApplication.Web"
+		Debug.AspNetCompiler.PhysicalPath = "SilverlightApplication.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SilverlightApplication.Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SilverlightApplication.Web"
+		Release.AspNetCompiler.PhysicalPath = "SilverlightApplication.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SilverlightApplication.Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3003"
+		DefaultWebSiteLanguage = "Visual Basic"
+		ProjOutputReferences = "{C713EDA6-CD8E-4D8B-B936-48FA2B955BDA}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C713EDA6-CD8E-4D8B-B936-48FA2B955BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C713EDA6-CD8E-4D8B-B936-48FA2B955BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C713EDA6-CD8E-4D8B-B936-48FA2B955BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C713EDA6-CD8E-4D8B-B936-48FA2B955BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7749D1DD-AA52-44D8-B262-A76E2DC4AD6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7749D1DD-AA52-44D8-B262-A76E2DC4AD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7749D1DD-AA52-44D8-B262-A76E2DC4AD6A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7749D1DD-AA52-44D8-B262-A76E2DC4AD6A}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

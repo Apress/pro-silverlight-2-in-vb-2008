@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Networking.CallFlicker"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	<UserControl.Resources>
+		<DataTemplate x:Key="imageTemplate">
+			<Image Stretch="Uniform" Width="200" Height="200"
+						 Margin="5" Source="{Binding ImageUrl}"
+						></Image>
+		</DataTemplate>
+	</UserControl.Resources>
+		<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<StackPanel Margin="5" Orientation="Horizontal">
+			<TextBlock Margin="5,3">Search for:</TextBlock>
+			<TextBox x:Name="txtSearchKeyword" Margin="5,0" MinWidth="150" Text="dogs"></TextBox>
+			<Button x:Name="cmdGetData1" Margin="5,0" Padding="3" Click="cmdGetDataRest_Click" Content="Get Data (Method #1)"></Button>
+			<Button x:Name="cmdGetData2" Margin="5,0" Padding="3" Click="cmdGetDataXmlHttp_Click" Content="Get Data (Method #2)"></Button>
+		</StackPanel>
+		<ScrollViewer Grid.Row="1"  Margin="10">
+			<ListBox x:Name="images">				
+			</ListBox>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Animations.RotatingButtons"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+	<UserControl.Resources>
+		<Storyboard x:Name="rotateStoryboard">
+			<DoubleAnimation Storyboard.TargetProperty="Angle"
+   To="360" Duration="0:0:0.8" RepeatBehavior="Forever"></DoubleAnimation>
+		</Storyboard>
+		<Storyboard x:Name="unrotateStoryboard">
+			<DoubleAnimation Storyboard.TargetProperty="Angle" To="0"
+         Duration="0:0:0.2"></DoubleAnimation>
+		</Storyboard>
+	</UserControl.Resources>
+		<Grid x:Name="LayoutRoot" Background="White">
+		<StackPanel Margin="5" Width="100">
+			<Button Content="One" Margin="10" Padding="5" RenderTransformOrigin="0.5,0.5"
+   MouseEnter="cmd_MouseEnter" MouseLeave="cmd_MouseLeave">
+				<Button.RenderTransform>
+					<RotateTransform></RotateTransform>
+				</Button.RenderTransform>
+			</Button>
+			<Button Content="Two" Margin="10" Padding="5" RenderTransformOrigin="0.5,0.5"
+   MouseEnter="cmd_MouseEnter" MouseLeave="cmd_MouseLeave">
+				<Button.RenderTransform>
+					<RotateTransform></RotateTransform>
+				</Button.RenderTransform></Button>
+			<Button Content="Three" Margin="10" Padding="5" RenderTransformOrigin="0.5,0.5"
+    MouseEnter="cmd_MouseEnter" MouseLeave="cmd_MouseLeave">
+				<Button.RenderTransform>
+					<RotateTransform></RotateTransform>
+				</Button.RenderTransform>
+			</Button>
+			<Button Content="Four" Margin="10" Padding="5" RenderTransformOrigin="0.5,0.5"
+   MouseEnter="cmd_MouseEnter" MouseLeave="cmd_MouseLeave">
+			<Button.RenderTransform>
+					<RotateTransform></RotateTransform>
+				</Button.RenderTransform>
+			</Button>
+		</StackPanel>
+
+
+	</Grid>
+</UserControl>

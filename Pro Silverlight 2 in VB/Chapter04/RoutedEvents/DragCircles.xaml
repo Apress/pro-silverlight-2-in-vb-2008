@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="RoutedEvents.DragCircles"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	<Canvas x:Name="parentCanvas"	               
+        Background="White"        
+        MouseLeftButtonDown="canvas_Click">
+	</Canvas>
+</UserControl>

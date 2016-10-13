@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<!-- saved from url=(0014)about:internet -->
+	<head>
+<script type="text/javascript">
+  function Reloaded()
+  {
+try{
+var stateKey = document.URL.substring(document.URL.indexOf("?StateKey=") + 10);
+  document.title=stateKey;
+  
+var control = top.document.getElementById("silverlightControl");
+ control.content.PagerScript.Navigate(stateKey);
+} catch(err) {}
+
+  }
+</script>
+
+		<title>BrowserHistory</title>
+
+	</head>
+	<body onload="Reloaded()">
+	</body>
+</html>

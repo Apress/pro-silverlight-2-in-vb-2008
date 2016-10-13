@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="EightBall.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+	<Grid Name="grid1">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<TextBox VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+	 TextWrapping="Wrap"
+     Margin="10,10,13,10" Name="txtQuestion" 
+     FontFamily="Verdana" FontSize="24"
+     Grid.Row="0" Text="[Place question here.]">
+		</TextBox>
+		<Button VerticalAlignment="Top" HorizontalAlignment="Left" 
+     Margin="10,0,0,20" Width="127" Name="cmdAnswer"
+     Click="cmdAnswer_Click" Grid.Row="1" Content="Ask the Eight Ball">
+		</Button>
+		<TextBox VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+     Margin="10,10,13,10" Name="txtAnswer"
+     IsReadOnly="True" FontFamily="Verdana" FontSize="24" Foreground="Green"
+     Grid.Row="2" Text="[Answer will appear here.]">
+		</TextBox>
+
+		<Grid.Background>
+			<LinearGradientBrush>
+				<LinearGradientBrush.GradientStops>
+					<GradientStop Offset="0.00" Color="Yellow" />
+					<GradientStop Offset="0.50" Color="White" />
+					<GradientStop Offset="1.00" Color="Purple" />
+				</LinearGradientBrush.GradientStops>
+			</LinearGradientBrush>
+		</Grid.Background>
+	</Grid>
+
+</UserControl>
+

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Resources.ResourceHierarchy"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+	<UserControl.Resources>
+		<LinearGradientBrush x:Key="ButtonFace">
+			<GradientStop Offset="0.00" Color="Purple" />
+			<GradientStop Offset="0.50" Color="White" />
+			<GradientStop Offset="1.00" Color="Yellow" />
+		</LinearGradientBrush>
+	</UserControl.Resources>
+
+	<StackPanel x:Name="LayoutRoot" Background="White">
+		<Button Content="Page Brush" Margin="5"
+			 Background="{StaticResource ButtonFace}"></Button>
+		<StackPanel>
+			<StackPanel.Resources>
+				<LinearGradientBrush x:Key="ButtonFace">
+					<GradientStop Offset="0.00" Color="Yellow" />
+					<GradientStop Offset="0.50" Color="White" />
+					<GradientStop Offset="1.00" Color="Purple" />
+				</LinearGradientBrush>
+			</StackPanel.Resources>
+
+			<Button Content="Panel Brush" Margin="5"
+			 Background="{StaticResource ButtonFace}"></Button>
+			<Button Content="Panel Brush" Margin="5"
+			 Background="{StaticResource ButtonFace}"></Button>
+		</StackPanel>
+	</StackPanel>
+</UserControl>

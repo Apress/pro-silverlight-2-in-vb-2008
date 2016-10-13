@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Elements.SimplePopup"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+	<StackPanel Margin="20" Background="White">
+		<TextBlock TextWrapping="Wrap" MouseLeftButtonDown="txt_MouseLeftButtonDown"
+		  Text="Click here to open the PopUp."></TextBlock>
+		<Popup x:Name="popUp" MaxWidth="200">
+			<Border Background="Lime" MouseLeftButtonDown="popUp_MouseLeftButtonDown">
+				<TextBlock Margin="10" 
+           Text="This is the PopUp."></TextBlock>
+			</Border>
+		</Popup>
+
+
+	</StackPanel>
+</UserControl>

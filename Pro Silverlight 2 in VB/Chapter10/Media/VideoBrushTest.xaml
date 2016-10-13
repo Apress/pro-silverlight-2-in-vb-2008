@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Media.VideoBrushTest"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	
+		<StackPanel x:Name="LayoutRoot" Background="White">
+		
+		<MediaElement x:Name="fireMovie" Source="fire.wmv" Height="0" Width="0" IsMuted="True"></MediaElement>
+		
+		<TextBlock Text="Fiery Letters" FontFamily="Arial Black" FontSize="80">
+		<TextBlock.Foreground>
+		<VideoBrush SourceName="fireMovie"></VideoBrush>
+		</TextBlock.Foreground>
+		</TextBlock>
+		
+		<!--<Rectangle Width="300" Height="1000" Stroke="Black">
+			<Rectangle.Fill>
+				<VideoBrush SourceName="fireMovie" Stretch="None" TileMode="Tile"></VideoBrush>
+			</Rectangle.Fill>
+		</Rectangle>-->
+    </StackPanel>
+</UserControl>

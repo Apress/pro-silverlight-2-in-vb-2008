@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Animations.GrowButton"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+
+
+	<UserControl.Resources>	
+		<Storyboard x:Name="storyboard" >
+			<DoubleAnimation 
+   Storyboard.TargetName="cmdGrow" Storyboard.TargetProperty="Width"
+   To="300" Duration="0:0:5"></DoubleAnimation>
+		</Storyboard>
+	</UserControl.Resources>
+	
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Button x:Name="cmdGrow" Width="160" Height="30" Click="Button_Click" Content="This button grows"></Button>
+	</Grid>
+</UserControl>

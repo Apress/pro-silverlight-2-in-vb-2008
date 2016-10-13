@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:43819/DataBinding.Web/StoreDb.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:43819/DataBinding.Web/StoreDb.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:43819/DataBinding.Web/StoreDb.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="StoreDb_GetProduct_InputMessage">
+    <wsdl:part name="parameters" element="GetProduct" />
+  </wsdl:message>
+  <wsdl:message name="StoreDb_GetProduct_OutputMessage">
+    <wsdl:part name="parameters" element="GetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreDb_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="StoreDb_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreDb_GetCategoriesWithProducts_InputMessage">
+    <wsdl:part name="parameters" element="GetCategoriesWithProducts" />
+  </wsdl:message>
+  <wsdl:message name="StoreDb_GetCategoriesWithProducts_OutputMessage">
+    <wsdl:part name="parameters" element="GetCategoriesWithProductsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StoreDb">
+    <wsdl:operation name="GetProduct">
+      <wsdl:input wsaw:Action="urn:StoreDb/GetProduct" message="StoreDb_GetProduct_InputMessage" />
+      <wsdl:output wsaw:Action="urn:StoreDb/GetProductResponse" message="StoreDb_GetProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="urn:StoreDb/GetProducts" message="StoreDb_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:StoreDb/GetProductsResponse" message="StoreDb_GetProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesWithProducts">
+      <wsdl:input wsaw:Action="urn:StoreDb/GetCategoriesWithProducts" message="StoreDb_GetCategoriesWithProducts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:StoreDb/GetCategoriesWithProductsResponse" message="StoreDb_GetCategoriesWithProducts_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

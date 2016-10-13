@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="ResizableSilverlightControl.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="175" Loaded="Page_Loaded">
+    <StackPanel x:Name="LayoutRoot" Background="AliceBlue">    
+		<TextBlock Margin="10" FontFamily="Georgia" FontSize="30"
+		 TextWrapping="Wrap">This page is 400<Run FontSize="22">x</Run>175 pixels big.</TextBlock>
+		<Button Margin="10" Padding="10" Content="Go to Page2" Click="Button_Click"></Button>
+	</StackPanel>
+</UserControl>

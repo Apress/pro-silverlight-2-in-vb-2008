@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="RoutedEvents.EventBubbling"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+     >
+	<Grid Margin="3" MouseLeftButtonDown="SomethingClicked">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Button Margin="5" Grid.Row="0" 		     
+		     MouseLeftButtonDown="SomethingClicked">
+			<StackPanel MouseLeftButtonDown="SomethingClicked">
+
+					<TextBlock Margin="3" MouseLeftButtonDown="SomethingClicked" HorizontalAlignment="Center" 
+         Text="Image and text label"></TextBlock>
+				<Image Source="happyface.jpg" Stretch="None" 
+         MouseLeftButtonDown="SomethingClicked" />
+				<TextBlock Margin="3" HorizontalAlignment="Center" 
+         MouseLeftButtonDown="SomethingClicked"
+         Text="Courtesy of the StackPanel"></TextBlock>
+			</StackPanel>
+		</Button>
+
+		<ListBox Grid.Row="1" Margin="5" x:Name="lstMessages"></ListBox>
+
+		<Button Grid.Row="3" Margin="5" Padding="3" 
+     x:Name="cmdClear" Click="cmdClear_Click" Content="Clear List"></Button>
+	</Grid>
+
+</UserControl>

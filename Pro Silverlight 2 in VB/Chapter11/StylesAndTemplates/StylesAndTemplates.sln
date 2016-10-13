@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "StylesAndTemplates", "StylesAndTemplates.vbproj", "{96F52F1E-8490-4181-9DDD-05052E656E2A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExpanderControl", "..\ExpanderControl\ExpanderControl.vbproj", "{387191FC-F739-4372-A5CF-8AE04FD68BDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96F52F1E-8490-4181-9DDD-05052E656E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F52F1E-8490-4181-9DDD-05052E656E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F52F1E-8490-4181-9DDD-05052E656E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F52F1E-8490-4181-9DDD-05052E656E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{387191FC-F739-4372-A5CF-8AE04FD68BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{387191FC-F739-4372-A5CF-8AE04FD68BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{387191FC-F739-4372-A5CF-8AE04FD68BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{387191FC-F739-4372-A5CF-8AE04FD68BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

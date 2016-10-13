@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Networking.ReadHtmlPage"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+     >
+    <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>			
+		</Grid.ColumnDefinitions>
+		
+		<TextBlock Margin="5,8,5,0">Look for year:</TextBlock>
+		<TextBox x:Name="txtYear" Grid.Column="1" Margin="5"
+		 Text="1985" MinWidth="100"></TextBox>
+		
+		<Button Grid.Row="1" Grid.Column="1"  Margin="5" Padding="3"
+		 x:Name="cmdGetData" Click="cmdGetData_Click" Content="Get Data"></Button>
+		<TextBlock x:Name="lblResult" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20"
+		HorizontalAlignment="Center"></TextBlock>
+	</Grid>
+</UserControl>

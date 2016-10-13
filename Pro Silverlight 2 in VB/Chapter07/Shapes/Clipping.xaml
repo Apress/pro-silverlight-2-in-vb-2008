@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Shapes.Clipping"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<Button Content="A button">
+			<Button.Clip>
+				<GeometryGroup FillRule="Nonzero">
+					<EllipseGeometry RadiusX="75" RadiusY="50" Center="100,150" />
+					<EllipseGeometry RadiusX="100" RadiusY="25" Center="200,150" />
+					<EllipseGeometry RadiusX="75" RadiusY="130" Center="140,140" />
+				</GeometryGroup>
+			</Button.Clip>
+		</Button>
+		<Image Grid.Column="1" Stretch="None" Source="creek.jpg">
+			<Image.Clip>
+				<GeometryGroup FillRule="Nonzero">
+					<EllipseGeometry RadiusX="75" RadiusY="50" Center="100,150" />
+					<EllipseGeometry RadiusX="100" RadiusY="25" Center="200,150" />
+					<EllipseGeometry RadiusX="75" RadiusY="130" Center="140,140" />
+				</GeometryGroup>
+			</Image.Clip>
+		</Image>
+	</Grid>
+</UserControl>

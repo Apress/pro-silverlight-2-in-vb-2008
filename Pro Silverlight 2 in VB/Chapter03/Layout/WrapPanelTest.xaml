@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Layout.WrapPanelTest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"     
+    xmlns:local="clr-namespace:Layout" >
+	<StackPanel Background="White">
+		<TextBlock Margin="5" Text="Content above the WrapPanel."></TextBlock>
+		<local:WrapPanel Margin="5" Background="LawnGreen">
+			<Button Width="50" Content="Button"></Button>
+			<Button Width="150" Content="Wide Button"></Button>
+			<TextBlock Margin="5" Text="Text in the WrapPanel"></TextBlock>			
+			<Button Width="100" Height="50" Content="Tall Button"></Button>
+			<Button Width="50" Content="Button"></Button>
+			<Button Width="150" Content="Wide Button"></Button>
+			<Button Width="50" Content="Button"></Button>
+		</local:WrapPanel>
+		<TextBlock Margin="5" Text="Content below the WrapPanel."></TextBlock>
+	</StackPanel>
+</UserControl>

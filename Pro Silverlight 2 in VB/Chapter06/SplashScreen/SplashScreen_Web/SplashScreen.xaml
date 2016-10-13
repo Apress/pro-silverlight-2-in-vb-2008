@@ -1,0 +1,16 @@
+﻿<Grid xmlns="http://schemas.microsoft.com/client/2007" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+   <StackPanel VerticalAlignment="Center">
+      <Grid>
+        <Rectangle x:Name="progressBarBackground" Fill="White" Stroke="Black" StrokeThickness="1" Stretch="Fill" Height="30" Margin="100,20"></Rectangle>
+        <Rectangle x:Name="progressBar" Fill="Yellow" Height="28" Margin="101,20">
+          <Rectangle.RenderTransform>
+            <TransformGroup>
+              <ScaleTransform x:Name="progressBarTransform" ScaleX="0" ScaleY="1"/>
+            </TransformGroup>
+          </Rectangle.RenderTransform>
+        </Rectangle>
+      </Grid>
+      <TextBlock x:Name="progressText" HorizontalAlignment="Center" Text="0% downloaded ..."></TextBlock>
+    </StackPanel>
+</Grid>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BrowserHistory
+</name>
+</assembly>
+<members>
+<member name="M:BrowserHistory.Page1.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:BrowserHistory.Page2.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:BrowserHistory.Page3.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:BrowserHistory.Page4.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:BrowserHistory.App.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

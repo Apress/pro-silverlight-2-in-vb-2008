@@ -1,0 +1,69 @@
+﻿<UserControl xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data" 
+    x:Class="DataBinding.DataGridTest"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Loaded="Page_Loaded"
+    xmlns:local="clr-namespace:DataBinding">
+
+	<UserControl.Resources>
+		<local:PriceConverter x:Key="PriceConverter"></local:PriceConverter>
+		<local:ImagePathConverter x:Key="ImagePathConverter"></local:ImagePathConverter>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<data:DataGrid x:Name="gridProducts" Margin="5" AutoGenerateColumns="False" RowHeight="100" LoadingRow="gridProducts_LoadingRow"
+		 PreparingCellForEdit="gridProducts_PreparingCellForEdit">
+			<!--<data:DataGrid.RowDetailsTemplate>
+				<DataTemplate>
+					<Border Margin="10" Padding="10" BorderBrush="SteelBlue" BorderThickness="3" CornerRadius="5">
+						<TextBlock Text="{Binding Description}" TextWrapping="Wrap" FontSize="10"></TextBlock>
+					</Border>
+				</DataTemplate>
+			</data:DataGrid.RowDetailsTemplate>-->
+			<data:DataGrid.Columns>
+				<data:DataGridTextColumn Header="Product" Width="175" Binding="{Binding ModelName}"></data:DataGridTextColumn>				
+				<data:DataGridTextColumn Header="Price" Binding="{Binding UnitCost, Converter={StaticResource PriceConverter}}"></data:DataGridTextColumn>
+				<data:DataGridTextColumn Header="Model Number" Binding="{Binding ModelNumber}"></data:DataGridTextColumn>
+				<data:DataGridTextColumn Header="Model Name" Binding="{Binding ModelName}"></data:DataGridTextColumn>
+				<data:DataGridTextColumn Width="400" Binding="{Binding Description}" Header="Description">
+					<data:DataGridTextColumn.ElementStyle>
+						<Style TargetType="TextBlock">
+							<Setter Property="TextWrapping" Value="Wrap"></Setter>							
+						</Style>
+					</data:DataGridTextColumn.ElementStyle>
+				</data:DataGridTextColumn>
+				
+				<data:DataGridTemplateColumn Header="Category">
+					<data:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<TextBlock Text="{Binding CategoryName}"></TextBlock>
+						</DataTemplate>
+					</data:DataGridTemplateColumn.CellTemplate>
+					<data:DataGridTemplateColumn.CellEditingTemplate>
+						<DataTemplate>
+							<ListBox SelectedItem="{Binding CategoryName,Mode=TwoWay}">
+							</ListBox>
+						</DataTemplate>
+					</data:DataGridTemplateColumn.CellEditingTemplate>
+				</data:DataGridTemplateColumn>
+				
+				<data:DataGridTemplateColumn>
+					<data:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Stretch="None"
+						 Source="{Binding ProductImagePath, Converter={StaticResource ImagePathConverter}}" >
+							</Image>
+						</DataTemplate>
+					</data:DataGridTemplateColumn.CellTemplate>
+				</data:DataGridTemplateColumn>
+			</data:DataGrid.Columns>
+		</data:DataGrid>
+
+		<TextBlock Grid.Row="1" x:Name="lblInfo" Margin="5"></TextBlock>
+    </Grid>
+</UserControl>

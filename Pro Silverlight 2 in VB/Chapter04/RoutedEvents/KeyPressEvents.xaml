@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="RoutedEvents.KeyPressEvents"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+	<Grid Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>			
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Grid Margin="5">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+				<ColumnDefinition></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<TextBlock Margin="3" Text="Type here:">
+            </TextBlock>
+			<TextBox Grid.Column="1" KeyDown="txt_KeyDown" KeyUp="txt_KeyUp"
+                     TextChanged="txt_TextChanged"></TextBox>
+		</Grid>
+
+		<ListBox Margin="5" x:Name="lstMessages" Grid.Row="1"></ListBox>
+		
+		<Button Click="cmdClear_Click" Grid.Row="2" HorizontalAlignment="Right"
+		 Margin="5" Padding="3" Content="Clear List"></Button>
+
+	</Grid>
+</UserControl>

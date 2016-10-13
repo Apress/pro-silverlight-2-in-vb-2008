@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="StylesAndTemplates.ExpanderTest"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+    xmlns:lib="clr-namespace:ExpanderControl;assembly=ExpanderControl"  >
+    <Grid x:Name="LayoutRoot" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		
+		<StackPanel>
+		<lib:Expander Margin="10" HeaderContent="The ExpanderHeader" IsExpanded="True">
+			<lib:Expander.Content>
+				<StackPanel>
+					<Button Margin="3" Padding="3" Content="Button One"></Button>
+					<Button Margin="3" Padding="3" Content="Button Two"></Button>
+					<Button Margin="3" Padding="3" Content="Button Three"></Button>
+					<Button Margin="3" Padding="3" Content="Button Four"></Button>
+				</StackPanel>
+			</lib:Expander.Content>
+		</lib:Expander>
+		
+			<lib:Expander Margin="10" HeaderContent="The Expander Header" IsExpanded="False">
+				<lib:Expander.Content>
+					<StackPanel>
+						<Button Margin="3" Padding="3" Content="Button One"></Button>
+						<Button Margin="3" Padding="3" Content="Button Two"></Button>
+						<Button Margin="3" Padding="3" Content="Button Three"></Button>
+						<Button Margin="3" Padding="3" Content="Button Four"></Button>
+					</StackPanel>
+				</lib:Expander.Content>
+				<lib:Expander.Template>					
+						
+								<ControlTemplate TargetType="lib:Expander">
+
+									<Grid>
+
+										<VisualStateManager.VisualStateGroups>
+
+											<VisualStateGroup x:Name="ViewStates">
+
+												<VisualStateGroup.Transitions>
+													<VisualTransition GeneratedDuration="0:0:0.5"></VisualTransition>
+
+												</VisualStateGroup.Transitions>
+
+												<VisualState x:Name="Expanded">
+													<Storyboard >
+														<DoubleAnimation Storyboard.TargetName="Content"
+								Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0"></DoubleAnimation>
+														<DoubleAnimation Storyboard.TargetName="ScaleArrowTransform"
+															Storyboard.TargetProperty="ScaleY" Duration="0" To="1"></DoubleAnimation>
+
+													</Storyboard>
+												</VisualState>
+
+												<VisualState x:Name="Collapsed">
+
+													<Storyboard>
+														<DoubleAnimation Storyboard.TargetName="Content"
+								Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0"></DoubleAnimation>
+														<DoubleAnimation Storyboard.TargetName="ScaleArrowTransform"
+															Storyboard.TargetProperty="ScaleY" Duration="0" To="-1"></DoubleAnimation>
+
+													</Storyboard>
+												</VisualState>
+
+											</VisualStateGroup>
+
+										</VisualStateManager.VisualStateGroups>
+
+										<Grid.RowDefinitions>
+											<RowDefinition Height="Auto"></RowDefinition>
+											<RowDefinition Height="Auto"></RowDefinition>
+											<RowDefinition Height="Auto"></RowDefinition>
+										</Grid.RowDefinitions>
+
+										<!-- Header -->
+										<Grid Background="Black">
+										<ContentControl Background="Black">
+											<ContentControl.Style>
+												<Style TargetType="ContentControl">
+													<Setter Property="Foreground" Value="White" />
+													<Setter Property="FontFamily" Value="Arial Black" />
+													<Setter Property="FontSize" Value="20" />
+												</Style>
+											</ContentControl.Style>
+											<ContentPresenter 
+										 x:Name="Header" Content="{TemplateBinding HeaderContent}" Margin="10"></ContentPresenter>
+										</ContentControl>
+										</Grid>
+
+										<ToggleButton Grid.Row="1" x:Name="ExpandCollapseButton" Margin="3" HorizontalAlignment="Center" Width="30" Height="30"
+									RenderTransformOrigin="0.5,0.5" >
+											<ToggleButton.Template>
+												<ControlTemplate>
+													<Grid>
+
+														<Rectangle Fill="Yellow" Stroke="Black" StrokeThickness="1" RadiusX="3" RadiusY="3"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="30"></Rectangle>
+														<Path Fill="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Data="M 0 4 L 4 0 L 8 4 Z">
+
+														</Path>
+													</Grid>
+												</ControlTemplate>
+											</ToggleButton.Template>
+											<ToggleButton.RenderTransform>
+												<ScaleTransform x:Name="ScaleArrowTransform"></ScaleTransform>
+											</ToggleButton.RenderTransform>
+										</ToggleButton>
+																				
+										
+										<!-- Content -->
+										<ContentPresenter Grid.Row="2" x:Name="Content" Content="{TemplateBinding Content}" Margin="5">
+										</ContentPresenter>
+
+
+									</Grid>
+
+								</ControlTemplate>
+							
+				</lib:Expander.Template>				
+			</lib:Expander>
+
+
+
+		</StackPanel>
+	</Grid>
+</UserControl>
